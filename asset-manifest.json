@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/reactFrontBack/static/css/main.36497136.chunk.css",
+    "main.js": "/reactFrontBack/static/js/main.aafd3282.chunk.js",
+    "main.js.map": "/reactFrontBack/static/js/main.aafd3282.chunk.js.map",
+    "runtime~main.js": "/reactFrontBack/static/js/runtime~main.56e6ec78.js",
+    "runtime~main.js.map": "/reactFrontBack/static/js/runtime~main.56e6ec78.js.map",
+    "static/css/2.266e55a5.chunk.css": "/reactFrontBack/static/css/2.266e55a5.chunk.css",
+    "static/js/2.760bc175.chunk.js": "/reactFrontBack/static/js/2.760bc175.chunk.js",
+    "static/js/2.760bc175.chunk.js.map": "/reactFrontBack/static/js/2.760bc175.chunk.js.map",
+    "index.html": "/reactFrontBack/index.html",
+    "precache-manifest.40d68493c99d5cedfdf5b6dfc5ea77ad.js": "/reactFrontBack/precache-manifest.40d68493c99d5cedfdf5b6dfc5ea77ad.js",
+    "service-worker.js": "/reactFrontBack/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/reactFrontBack/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.36497136.chunk.css.map": "/reactFrontBack/static/css/main.36497136.chunk.css.map"
+  }
+}
