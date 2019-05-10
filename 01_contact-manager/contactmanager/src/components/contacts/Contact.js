@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Consumer } from '../../context'
+import axios from 'axios'
 
 
 class Contact extends Component {
@@ -8,8 +10,13 @@ class Contact extends Component {
         showContactInfo: false
     }
 
-    onDeleteClick = (id, dispatch) => {
-        dispatch({ type: 'DELETE_CONTACT', payload: id })
+    onDeleteClick = async (id, dispatch) => {
+        try {
+            await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+            dispatch({ type: 'DELETE_CONTACT', payload: id })
+        } catch (e) {
+            dispatch({ type: 'DELETE_CONTACT', payload: id })
+        }
     }
 
     render() {
@@ -23,7 +30,19 @@ class Contact extends Component {
                     return (
                         <div className="card card-body mb-3">
                             <h4>{name}{' '} <i style={{ cursor: 'pointer' }} onClick={() => this.setState({ showContactInfo: !this.state.showContactInfo })} className="fas fa-sort-down"></i>
-                                <i style={{ cursor: 'pointer', float: 'right', color: 'red' }} onClick={this.onDeleteClick.bind(this, id, dispatch)} className="fas fa-times"></i></h4>
+                                <i style={{ cursor: 'pointer', float: 'right', color: 'red' }} onClick={this.onDeleteClick.bind(this, id, dispatch)} className="fas fa-times"></i>
+                                <Link to={`contact/edit/${id}`}>
+                                    <i
+                                        className="fas fa-pencil-alt"
+                                        style={{
+                                            cursor: 'pointer',
+                                            float: 'right',
+                                            color: 'black',
+                                            marginRight: '1em'
+                                        }}
+                                    ></i>
+                                </Link>
+                            </h4>
                             {showContactInfo ? (
                                 <ul className="list-group">
                                     <li className="list-group-item">Email: {email}</li>
